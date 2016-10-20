@@ -47,13 +47,9 @@ class devenv {
     # define global exec path
     Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/', '/usr/local/bin', '/usr/local/sbin' ] }
 
-#    class { ' devenv::basepackages': }
     include devenv::basepackages
-
-#    class { 'zsh': }
     include devenv::zsh
-#    class { 'powerline': }
-    #include devenv::powerline
+    include devenv::powerline
 
     #Class['devenv::basepackages'] -> Class['devenv::zsh']
     #Class['devenv::zsh'] -> Class['devenv::powerline']
