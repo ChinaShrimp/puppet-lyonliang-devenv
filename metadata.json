@@ -2,14 +2,20 @@
   "name": "lyonliang-devenv",
   "version": "0.1.0",
   "author": "lyonliang",
-  "summary": null,
+  "summary": "Development Environment Module",
   "license": "Apache-2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "source": "https://github.com/ChinaShrimp/puppet-lyonliang-devenv.git",
+  "project_page": "https://github.com/ChinaShrimp/puppet-lyonliang-devenv",
+  "issues_url": "https://github.com/ChinaShrimp/puppet-lyonliang-devenv/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"acme-ohmyzsh"},
+    {"name":"stankevich-python"}
   ],
-  "data_provider": null
+  "data_provider": null,
+  "description": "Puppet module for setting up basic development environment",
+  "tags": [
+    "development environment"
+  ]
 }
 
