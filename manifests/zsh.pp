@@ -7,10 +7,5 @@ class devenv::zsh {
     ohmyzsh::install { 'vagrant': }
     ohmyzsh::plugins { 'vagrant': 
         plugins => 'git extract tmux z vi-mode',
-        notify  => Exec['add puppet path into .zshrc'],
-    }
-
-    exec { 'add puppet path into .zshrc':
-        command => 'echo "PATH=/opt/puppetlabs/bin:$PATH" >> /home/vagrant/.zshrc',
     }
 }

@@ -9,7 +9,6 @@ class devenv::powerline {
         dev         => 'absent',
         virtualenv  => 'absent',
         gunicorn    => 'absent',
-        require     => Class['ohmyzsh'],
     }
 
     python::pip { 'powerline-status':
@@ -30,7 +29,7 @@ class devenv::powerline {
     # apply powerline to zsh
     exec { 'install powerline into .zshrc':
       command => 'echo "source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh" >> /home/vagrant/.zshrc',
-      require => Class['python'],
+      require => Python::Pip['powerline-status'],
     }
 
     # apply powerline to tmux

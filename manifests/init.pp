@@ -51,6 +51,5 @@ class devenv {
     include devenv::zsh
     include devenv::powerline
 
-    #Class['devenv::basepackages'] -> Class['devenv::zsh']
-    #Class['devenv::zsh'] -> Class['devenv::powerline']
+    Class['devenv::basepackages'] -> Class['devenv::zsh'] -> Class['devenv::powerline']
 }
